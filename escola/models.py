@@ -13,7 +13,7 @@ class Student(models.Model):
 class Course(models.Model):
     name = models.CharField(max_length=50)
     shift = models.CharField(max_length=50)
-    
+    student = models.ForeignKey(Student, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.name
@@ -21,6 +21,9 @@ class Course(models.Model):
 class Class(models.Model):
     name = models.CharField(max_length=50)
     student_quantity = models.IntegerField()
+    student = models.ForeignKey(Student, on_delete=models.CASCADE)
+
+
 
 
     def __str__(self):
