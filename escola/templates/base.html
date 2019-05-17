@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Freelancer - Start Bootstrap Theme</title>
+    <title>School System</title>
 
     <!-- Bootstrap core CSS -->
     <link href="{% static 'startbootstrap/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
@@ -17,12 +17,10 @@
     <!-- Custom fonts for this template -->
     <link href="{% static 'startbootstrap/vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet"
-        type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
 
     <!-- Plugin CSS -->
-    <link href="{% static 'startbootstrap/vendor/magnific-popup/magnific-popup.css' %}" rel="stylesheet"
-        type="text/css">
+    <link href="{% static 'startbootstrap/vendor/magnific-popup/magnific-popup.css' %}" rel="stylesheet" type="text/css">
 
     <!-- Custom styles for this template -->
     <link href="{% static 'startbootstrap/css/freelancer.min.css' %}" rel="stylesheet">
@@ -35,30 +33,35 @@
     <nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav">
         <div class="container">
             <a class="navbar-brand js-scroll-trigger" href="#page-top">School System</a>
-            <button class="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded"
-                type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
-                aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded" type="button"
+                data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation">
                 Menu
                 <i class="fas fa-bars"></i>
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item mx-0 mx-lg-1">
-                        <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">Student</a>
+                        <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/home/alunos">Alunos</a>
                     </li>
                     <li class="nav-item mx-0 mx-lg-1">
-                        <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">Course</a>
+                        <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">Cursos</a>
                     </li>
                     <li class="nav-item mx-0 mx-lg-1">
-                        <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Class</a>
+                        <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Turma</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    {% block content %}
-    {% endblock %}
+    <header class="masthead bg-primary text-white text-center">
+        {% block content %}
+        {% endblock %}
+    </header>
+
+
+
 
 
 
@@ -259,8 +262,7 @@
                     <div class="col-lg-8 mx-auto">
                         <h2 class="text-secondary text-uppercase mb-0">Project Name</h2>
                         <hr class="star-dark mb-5">
-                        <img class="img-fluid mb-5" src="{% static 'startbootstrap/img/portfolio/submarine.png' %}"
-                            alt="">
+                        <img class="img-fluid mb-5" src="{% static 'startbootstrap/img/portfolio/submarine.png' %}" alt="">
                         <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque
                             assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit
                             asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>

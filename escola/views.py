@@ -8,3 +8,7 @@ def home(request):
 def student(request):
     students = Student.objects.all()
     return render(request, 'student/list.html', {'students':students})
+
+def course(request):
+    courses = Course.objects.all()
+    return render(request, 'course/list.html', {'courses':courses})
