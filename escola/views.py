@@ -12,3 +12,7 @@ def student(request):
 def course(request):
     courses = Course.objects.all()
     return render(request, 'course/list.html', {'courses':courses})
+
+def classs(request):
+    classs = Class.objects.all()
+    return render(request, 'class/list.html', {'classs':classs})
