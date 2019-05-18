@@ -9,15 +9,16 @@
             <thead>
                 <tr>
                     <th>Nome</th>
-                  
-
+                    <th>Modalidade</th>
+                    <th>Turno</th>
                 </tr>
             </thead>
             <tbody>
                 {% for course in courses %}
                 <tr>
                     <td>{{course.name}}</td>
-            
+                    <td>{{course.modality}}</td>
+                    <td>{{course.shift}}</td>          
                 </tr>
                 {% endfor %}
 
