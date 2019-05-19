@@ -14,7 +14,7 @@ def student(request):
     if registration:
         students = Student.objects.all()
 
-        students = students.filter(registration__icontains=registration) 
+        students = students.filter(registration=registration) 
     else:
         students = Student.objects.all()
 
