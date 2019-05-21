@@ -11,7 +11,6 @@ class Course(models.Model):
 class Class(models.Model):
     name = models.CharField(max_length=50)
 
-
     def __str__(self):
         return self.name
 
@@ -22,7 +21,6 @@ class Student(models.Model):
     genre = models.CharField(max_length=50)
     turma  = models.ForeignKey(Class, on_delete=models.CASCADE)
     course = models.ForeignKey(Course, on_delete=models.CASCADE)
-
 
     def __str__(self):
         return self.name
