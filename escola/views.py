@@ -20,6 +20,16 @@ def student(request):
 
     return render(request, 'student/list.html', {'students':students})
 
+def student_delete(request,id):
+    student = Student.objects.get(pk=id)
+    form = StudentForm(request.POST, instance=student)
+    if request.method == 'POST':
+        student.delete()
+        return redirect('student_list')
+    else:
+        student.delete()
+        return redirect('student_list')
+
 def form_student(request):
     if (request.method == 'POST'):
         form = StudentForm(request.POST)

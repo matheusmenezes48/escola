@@ -7,7 +7,7 @@
         <div class="col-11">
             <form action="">
                 <div>
-                    <input type="text"  id='name' name="registration" placeholder="Digite a Matrícula">
+                    <input type="text" id='name' name="registration" placeholder="Digite a Matrícula">
                 </div>
                 <button type='submit'>
                     Buscar
@@ -30,6 +30,7 @@
                     <th>Sexo</th>
                     <th>Turma</th>
                     <th>Curso</th>
+                    <th>Mais</th>
 
                 </tr>
             </thead>
@@ -42,7 +43,9 @@
                     <td>{{student.genre}}</td>
                     <td>{{student.turma}}</td>
                     <td>{{student.course}}</td>
-
+                    <td>
+                        <a href="/home/alunos/delete/{{student.id}}">Deletar</a>
+                    </td>
 
 
                 </tr>
