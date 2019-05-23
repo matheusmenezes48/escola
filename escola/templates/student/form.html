@@ -2,7 +2,7 @@
 <div class="container">
     <ol class="breadcrumb">
         <li class="breadcrumb-item">
-            <a href="/home/alunos">Alunos</a>
+            <a href="/home/alunos/form/">Alunos</a>
         </li>
         <li class="breadcrumb-item active">Cadastrando Alunos</li>
     </ol>
@@ -32,19 +32,19 @@
 
 
                         <div class="form-group">
-                            <label for="{{for.year.id_for_label}}">Ano de nascimento</label>
+                            <label for="{{for.date_of_birth.id_for_label}}">Data de nascimento</label>
                             <div>
-                                {{form.year}} {% for error in form.year.errors %}
-                                <label for="{{for.year.id_for_label}}" class="error">{{error}}</label>
+                                {{form.date_of_birth}} {% for error in form.date_of_birth.errors %}
+                                <label for="{{for.date_of_birth.id_for_label}}" class="error">{{error}}</label>
                                 {% endfor %}
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label for="{{for.genre.id_for_label}}">Gênero</label>
+                            <label for="{{for.genrer.id_for_label}}">Gênero</label>
                             <div>
-                                {{form.genre}} {% for error in form.genre.errors %}
-                                <label for="{{for.genre.id_for_label}}" class="error">{{error}}</label>
+                                {{form.genrer}} {% for error in form.genrer.errors %}
+                                <label for="{{for.genrer.id_for_label}}" class="error">{{error}}</label>
                                 {% endfor %}
                             </div>
                         </div>

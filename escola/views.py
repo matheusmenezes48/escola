@@ -9,16 +9,13 @@ def home(request):
 
 
 def student(request):
-    registration = request.GET.get('registration')
-
-    if registration:
-        students = Student.objects.all()
-
-        students = students.filter(registration=registration) 
+    if request.method == "POST":
+        select = request.POST.get('select')
+        students = Student.objects.all().order_by(select)
+        return render(request, 'student/list.html', {'students':students})
     else:
-        students = Student.objects.all()
-
-    return render(request, 'student/list.html', {'students':students})
+        students = Student.objects.all() 
+        return render(request, 'student/list.html', {'students':students})
 
 def student_delete(request,id):
     student = Student.objects.get(pk=id)

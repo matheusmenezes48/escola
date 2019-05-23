@@ -1,4 +1,4 @@
-from django.forms import ModelForm, TextInput, Select
+from django.forms import ModelForm, TextInput, Select,DateInput
 from .models import Student
 from .models import Course
 from .models import Class
@@ -15,9 +15,9 @@ class StudentForm(ModelForm):
             'placeholder': 'Exemplo: '}),
             'Matrícula': TextInput(attrs={'class':'form-control',
             'placeholder': 'Exemplo: '}),
-            'Ano de nascimento': TextInput(attrs={'class':'form-control',
+            'Ano de nascimento': DateInput(attrs={'class':'form-control',
             'placeholder': 'Exemplo: '}),
-            'Gênero': TextInput(attrs={'class':'form-control',
+            'Gênero': Select(attrs={'class':'form-control',
             'placeholder': 'Exemplo: '}),
             'turma': Select(attrs={'class':'form-control',
             'placeholder': 'Exemplo: '}),

@@ -4,21 +4,23 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-11">
-            <form action="">
-                <div>
-                    <input type="text" id='name' name="registration" placeholder="Digite a Matrícula">
+        <div class="col-12">
+            <form method="POST" action="/home/alunos/">
+                {% csrf_token %}
+                <div class="input-group">
+                    <select class="custom-select" name="select">
+                        <option value="date_of_birth">data de nascimento</option>
+                        <option value="name">Nome</option>
+                    </select>
                 </div>
-                <button type='submit'>
-                    Buscar
-                </button>
+                <button class="btn btn-outline-secondary" type="input">Ordenar</button>
             </form>
         </div>
-        <a href='form'>
-            <button>novo</button>
-        </a>
-    </div>
 
+    </div>
+    <a href='form'>
+        <button>novo</button>
+    </a>
     <div class="row">
 
         <table class="table">
@@ -39,8 +41,8 @@
                 <tr>
                     <td>{{student.name}}</td>
                     <td>{{student.registration}}</td>
-                    <td>{{student.year}}</td>
-                    <td>{{student.genre}}</td>
+                    <td>{{student.date_of_birth}}</td>
+                    <td>{{student.genrer}}</td>
                     <td>{{student.turma}}</td>
                     <td>{{student.course}}</td>
                     <td>
